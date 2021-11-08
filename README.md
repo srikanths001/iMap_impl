@@ -21,5 +21,5 @@ TODO:
 - Camera Tracking Module: The paper does not mention what approach is being used for the tracking module. I am assuming they have used a variation of ICP algorithm for computing the pose of the new frame. This has to be implemented.
 - Joint optimization of the pose of the keyframes. The paper does not explicitly mention the details of the pose optimization. I assume some kind of non-linear least squares is required.
 - Keyframe and image pixels sampling. The paper mentions that to make the whole system real time, certain number of points are sampled and fed to the network. This has to be implemented. Currently the system uses all the pixels in the image for backprojection.
-- Include keyframes for optimization in mapping module. Implement mapping module.
+- Include keyframes for optimization in mapping module. Implement mapping module. Also, project 3D points from the last M keyframes during joint optimization. Currently only the current frame's points are projected and optimized.
 - Parallelize the tracking and mapping thread. The implementation can be in c++.
